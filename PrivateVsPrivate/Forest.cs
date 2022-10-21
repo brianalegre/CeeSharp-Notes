@@ -2,35 +2,17 @@ using System;
 
 namespace BasicClasses
 {
-  class Forest
-  {
-    public int age;
-    // Changed from public to private
-    private string biome;
-    
-    public string Name
-    { get; set; }
-    
-    public int Trees
-    { get; set; }
-    
-    public string Biome
+    class Program
     {
-      get { return biome; }
-      set
-      {
-        if (value == "Tropical" ||
-            value == "Temperate" ||
-            value == "Boreal")
+        static void Main(string[] args)
         {
-          biome = value;
-        }
-        else
-        {
-          biome = "Unknown";
-        }
-      }
-    }
-  }
+            Forest f = new Forest();
+            f.Name = "Congo";
+            f.Trees = 0;
+            f.Biome = "Desert";
 
+            Console.WriteLine(f.Name);
+            Console.WriteLine(f.Biome);
+        }
+    }
 }
