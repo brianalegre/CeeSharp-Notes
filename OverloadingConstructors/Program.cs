@@ -2,21 +2,21 @@ using System;
 
 namespace BasicClasses
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Forest f = new Forest("Congo", "Tropical");
-      f.Trees = 0;
+        static void Main(string[] args)
+        {
+            Forest f = new Forest("Congo", "Tropical");
+            f.Trees = 0;
 
-      Console.WriteLine(f.Name);
-      Console.WriteLine(f.Biome);
+            Console.WriteLine(f.Name);
+            Console.WriteLine(f.Biome);
 
-      // Call Second Constructor
-      Forest F = new Forest("Rendlesham");
+            // Call Second Constructor
+            Forest f = new Forest("Rendlesham");
 
-      // Print Biome
-      Console.WriteLine(f.Biome);
+            // Print Biome
+            Console.WriteLine(f.Biome);
+        }
     }
-  }
 }

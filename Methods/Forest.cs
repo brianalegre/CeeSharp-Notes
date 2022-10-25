@@ -2,35 +2,57 @@ using System;
 
 namespace BasicClasses
 {
-  class Forest
-  {
-    public int age;
-    // Changed from public to private
-    private string biome;
-    
-    public string Name
-    { get; set; }
-    
-    public int Trees
-    { get; set; }
-    
-    public string Biome
+    class Forest
     {
-      get { return biome; }
-      set
-      {
-        if (value == "Tropical" ||
-            value == "Temperate" ||
-            value == "Boreal")
+        public int age;
+        private string biome;
+
+        public string Name
+        { get; set; }
+
+        public int Trees
+        { get; set; }
+
+        public string Biome
         {
-          biome = value;
+            get { return biome; }
+            set
+            {
+                if (value == "Tropical" ||
+                    value == "Temperate" ||
+                    value == "Boreal")
+                {
+                    biome = value;
+                }
+                else
+                {
+                    biome = "Unknown";
+                }
+            }
         }
-        else
+
+        public int Age
         {
-          biome = "Unknown";
+            get { return age; }
+            private set { age = value; }
         }
-      }
+
+        // Define a method
+        public int Grow()
+        {
+            Trees += 30;
+            Age += 1;
+            return Trees;
+        }
+
+        // Define a method
+        public int Burn()
+        {
+            Trees -= 20;
+            Age += 1;
+            return Trees;
+        }
+
     }
-  }
 
 }
