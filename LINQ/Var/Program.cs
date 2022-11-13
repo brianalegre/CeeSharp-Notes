@@ -10,7 +10,18 @@ namespace LearnLinq
         {
             List<string> heroes = new List<string> { "D. Va", "Lucio", "Mercy", "Soldier 76", "Pharah", "Reinhardt" };
 
+            var shortHeroes = from h in heroes
+                              where h.Length < 8
+                              select h;
 
+            foreach (string h in shortHeroes)
+            {
+                Console.WriteLine(h);
+            }
+
+            var longHeroes = heroes.Where(n => n.Length > 8);
+
+            Console.WriteLine(longHeroes.Count());
         }
     }
 }
